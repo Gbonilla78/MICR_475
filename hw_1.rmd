@@ -1,0 +1,12 @@
+---
+title: "Homework 1"
+output: github_document
+---
+
+I was reading a book on **helium**... I couldn't put it *down* ----this is a joke
+
+```{r}
+2+2
+```
+
+
