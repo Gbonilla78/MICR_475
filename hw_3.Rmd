@@ -1,8 +1,6 @@
 ---
 title: "Homework 3"
-output:
-  html_document:
-    df_print: paged
+output: github_document
 ---
 
 Today I wanted to investigate if the price of wine indicated higher quality by points. Utilizing the system below a plot was created to investigate price versus points. This plot indicates that price is not the sole factor in points in wine as high quality (>90) points are shown across a variety of price ranges. Further, the highest price points actually indicate lower quality wines.
