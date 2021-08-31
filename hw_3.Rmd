@@ -13,12 +13,10 @@ Today I wanted to investigate if the price of wine indicated higher quality by p
 50-74 Not recommended.
 
 
-
 ```{r}
 library(tidyverse)
 Wine<-read.csv("winemag-data_first150k.csv")
 price <- (Wine$price)
 points <- (Wine$points)
 ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_point()
-
 ```
