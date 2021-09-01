@@ -3,7 +3,7 @@ title: "Homework 3"
 output: github_document
 ---
 
-Today I wanted to investigate if the price of wine indicated higher quality by points. Utilizing the system below a plot was created to investigate price versus points. This plot indicates that price is not the sole factor in points in wine as high quality (>90) points are shown across a variety of price ranges. Further, the highest price points actually indicate lower quality wines.
+Today I wanted to investigate if the price of wine always indicated higher quality by points. Utilizing the system below a plot was created to investigate price versus points. This plot indicates that price is not the sole factor in points in wine as high quality (>90) points are shown across a variety of price ranges. Further, the highest price points actually indicate lower quality wines when compared to some of the lower price points.
 
 95-100 Classic: a great wine.
 90-94 Outstanding: a wine of superior character and style.
