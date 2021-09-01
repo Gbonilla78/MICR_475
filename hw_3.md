@@ -22,6 +22,4 @@ points <- (Wine$points)
 ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_point()
 ```
 
-    ## Warning: Removed 13695 rows containing missing values (geom_point).
-
 ![](hw_3_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
