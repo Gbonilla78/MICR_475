@@ -13,7 +13,7 @@ Today I wanted to investigate if the price of wine always indicated higher quali
 50-74 Not recommended.
 
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 Wine<-read.csv("winemag-data_first150k.csv")
 price <- (Wine$price)
