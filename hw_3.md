@@ -10,7 +10,7 @@ points actually indicate lower quality wines when compared to some of
 the lower price points.
 
 95-100 Classic: a great wine. 90-94 Outstanding: a wine of superior
-character and style. 85-89 Very good: a wine with special qualities.
+character and style. 85-89 Very good: a wine withhelp special qualities.
 80-84 Good: a solid, well-made wine. 75-79 Mediocre: a drinkable wine
 that may have minor flaws. 50-74 Not recommended.
 
@@ -20,11 +20,11 @@ Wine<-read.csv("winemag-data_first150k.csv")
 price <- (Wine$price)
 points <- (Wine$points)
 ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_violin()+ 
-  labs(title="EPIC MEGA Violin plot", 
+  labs(title="Violin plot", 
        subtitle="Wine Price Versus Points",
        caption="Source: Wine",
-       x="PRICE BABY PRICE",
-       y="MEGA AWESOME POINTS")
+       x="Price",
+       y="Wine Quality Points")
 ```
 
 ![](hw_3_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
