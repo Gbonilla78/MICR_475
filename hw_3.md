@@ -17,8 +17,6 @@ that may have minor flaws. 50-74 Not recommended.
 ``` r
 library(tidyverse)
 Wine<-read.csv("winemag-data_first150k.csv")
-price <- (Wine$price)
-points <- (Wine$points)
 ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_violin()+ 
   labs(title="Violin plot", 
        subtitle="Wine Price Versus Points",
