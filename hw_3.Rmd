@@ -18,5 +18,10 @@ library(tidyverse)
 Wine<-read.csv("winemag-data_first150k.csv")
 price <- (Wine$price)
 points <- (Wine$points)
-ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_point()
+ggplot(data = Wine, mapping = aes(x = price, y = points)) + geom_violin()+ 
+  labs(title="EPIC MEGA Violin plot", 
+       subtitle="Wine Price Versus Points",
+       caption="Source: Wine",
+       x="PRICE BABY PRICE",
+       y="MEGA AWESOME POINTS")
 ```
