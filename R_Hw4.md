@@ -1,8 +1,12 @@
 Homework 4
 ================
 
+# Part 1 print and sum function
+
+Gregory Bonilla 9/10/2021
+
 ``` r
-#running the tests
+#running the beginning homework tests
 a <- 3
 b <- 2
 print(a+b)
@@ -15,6 +19,8 @@ sum(a+b)
 ```
 
     ## [1] 5
+
+# Part 2 flight package
 
 ``` r
 #loading in the packages
