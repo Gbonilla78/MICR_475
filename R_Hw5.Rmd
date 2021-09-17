@@ -1,0 +1,46 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+```{r, message=FALSE}
+library(tidyverse)
+library(dplyr)
+view(diamonds)
+#question 1
+diamonds %>% 
+  group_by(cut) %>%
+  summarise(counts = n())
+
+#question 2
+datapercent<-sample_frac(diamonds,0.01)
+
+#question 3
+Diamonds1 <-diamonds %>%
+  group_by(clarity) %>%
+  slice_max(order_by=carat,n=100, with_ties=FALSE)%>%
+  summarise(mean_size=mean(carat))
+  
+  
+
+#question 4
+ggplot(data = diamonds, mapping = aes(x = x, y = y)) + geom_point()+labs(title="Diamonds", 
+       subtitle="Length versus width",
+       caption="Source: Diamonds",
+       x="length",
+       y="Width")
+
+avg_size_filt <- filter(diamonds, z >2)
+ggplot(data = diamonds, mapping = aes(x = x, y = z)) + geom_point()+labs(title="Diamonds", 
+       subtitle="Length versus depth",
+       caption="Source: Diamonds",
+       x="length",
+       y="depth")  
+```
+
+
+
+
