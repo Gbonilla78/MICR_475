@@ -28,6 +28,8 @@ Data points are unclear
 
 Error bars extend below the axis
 
+The two concentrations between the average and observed use two different arbitrary styles (diamonds vs lines)
+
 ## Ways to fix 
 
 Changing error bars to a different style such as eyes
