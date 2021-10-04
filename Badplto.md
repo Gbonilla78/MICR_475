@@ -1,8 +1,6 @@
 Badplot
 ================
 
-# Bad plot
-
 Here is my example of a very bad plot. First, there is nearly zero
 context on what we are actually looking at (Tufte 74). Second, because
 it contains an excessive amount of ink in the form of the red border and

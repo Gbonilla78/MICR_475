@@ -3,7 +3,6 @@ title: "Badplot"
 output: github_document
 ---
 
-# Bad plot
 Here is my example of a very bad plot. First, there is nearly zero context on what we are actually looking at (Tufte 74). Second, because it contains an excessive amount of ink in the form of the red border and labels (Tufte p 93). The graphical integrity of this chart is severely compromised because of the mislabeling of the data points which creates an illusion of a 100+ points. In reality there are less than 20 points (Tufte p 87). The design of this plot is very confusing and leads you wondering why do we not have separated charts for each of the data that is trying to be shown (Tufte 137)? There is also a scale problem where it is actually reversed and doesnt begin at 0 (Sylor 2020).
 
 ```{r,warning=FALSE}
