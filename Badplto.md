@@ -31,7 +31,9 @@ ggplot(Micro,aes(Microbeads,Fragments))+
   scale_y_continuous(sec.axis = sec_axis(~ . + 10, name= "more pieces"))
 ```
 
-![](Badplto_files/figure-gfm/unnamed-chunk-1-1.png)<!-- --> \# Good plot
+![](Badplto_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+# Good plot
 
 Restructured and redisgned to be minimal. Also separated the data points
 so it isnt as clunky and removed the coordinate systems.

@@ -23,6 +23,8 @@ ggplot(Micro,aes(Microbeads,Fragments))+
                                     size = 10)) +
   scale_y_continuous(sec.axis = sec_axis(~ . + 10, name= "more pieces"))
 ```
+
+
 # Good plot
 
 Restructured and redisgned to be minimal. Also separated the data points so it isnt as clunky and removed the coordinate systems.
