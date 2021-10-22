@@ -33,7 +33,8 @@ Diamonds1 <-diamonds %>%
   
 
 #question 4
-ggplot(data = diamonds, mapping = aes(x = x, y = y)) + geom_point()+labs(title="Diamonds", 
+avg_size_filt <- filter(diamonds, y<20, y>0, x>0)
+ggplot(data = avg_size_filt, mapping = aes(x = x, y = y)) + geom_point()+labs(title="Diamonds", 
        subtitle="Length versus width",
        caption="Source: Diamonds",
        x="length",
@@ -43,12 +44,12 @@ ggplot(data = diamonds, mapping = aes(x = x, y = y)) + geom_point()+labs(title="
 ![](R_Hw5_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 ``` r
-avg_size_filt <- filter(diamonds, z >2)
-ggplot(data = diamonds, mapping = aes(x = x, y = z)) + geom_point()+labs(title="Diamonds", 
+avg_size_filt2 <- filter(diamonds, z <10, z>0, x>0)
+ggplot(data = avg_size_filt2, mapping = aes(x = x, y = z)) + geom_point()+labs(title="Diamonds", 
        subtitle="Length versus depth",
        caption="Source: Diamonds",
        x="length",
-       y="depth")  
+       y="depth") 
 ```
 
-![](R_Hw5_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
+![](R_Hw5_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
