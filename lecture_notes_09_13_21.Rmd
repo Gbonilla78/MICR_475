@@ -1,0 +1,58 @@
+---
+title: "lecture_notes09_13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+glimpse(diamonds)
+```
+
+## Concept 1
+Split - Apply - Combine Concept
+[group]
+
+## Concept 2
+Piping %>%
+feeding the return value to the first argument of next function
+allows for better "reading" of R code as sentences (more of a flow chart than disconnected code)
+take this data frame, group the data into unique values, THEN calculate things and make a plot for example
+
+what mappings would we use ? geom - point\
+
+Functions that return ONE result PER GROUP = summarise()
+
+Functions that return ONE result PER ROW = mutate()
+
+```{r}
+ggplot(diamonds, aes(x = clarity,y = price))
+  geom_boxplot()
+```
+
+lets calculate the average (and std. deviation) for price for each clarity category
+
+```{r}
+clarity_cost <- diamonds %>%
+  group_by(clarity) %>% #split
+  summarise(average.cost = mean(price, na.rm = TRUE), #function in R for average is mean! na.rm = ignore N/A
+            std.dev = sd(price, na.rm =TRUE)) 
+  ggplot(clarity_cost, aes(x=clarity,y=average.cost)) + 
+    geom_pointrange(aes(ymin = average.cost - std.dev,
+                        ymax = average.cost + std.dev))
+```
+
+## Concept 3 - mutate
+
+```{r}
+price_per_carat <- diamonds %>%
+  # group_by(clarity_cost) %>%
+  mutate(cost.per.carat = price / carat)
+
+ggplot(price_per_carat, aes(x = cost.per.carat, color =  clarity)) + 
+  geom_density()
+```
+
+
+
+

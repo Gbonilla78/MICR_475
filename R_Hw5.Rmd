@@ -7,7 +7,6 @@ output: github_document
 ```{r, message=FALSE}
 library(tidyverse)
 library(dplyr)
-view(diamonds)
 #question 1
 diamonds %>% 
   group_by(cut) %>%
