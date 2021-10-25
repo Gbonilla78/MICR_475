@@ -1,12 +1,11 @@
----
-title: "R Notebook"
-output: github_document
----
-
+R Notebook
+================
 
 # Question 1
+
 ## First plot for visualization
-```{r, message=FALSE, warning=FALSE}
+
+``` r
 library(tidyverse)
 library(ggplot2)
 library(scales)
@@ -16,10 +15,13 @@ library(scales)
 ggplot(diamonds, aes(factor(color), (x=price/carat), fill=color)) + geom_boxplot() + ggtitle("Diamond Price per Carat according Color") + xlab("Color") + ylab("Diamond Price per Carat in US Dollars")
 ```
 
-# Question 1 
-## Second plot for visualization
-```{r, message=FALSE, warning=FALSE}
+![](Hw8_Final_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
+# Question 1
+
+## Second plot for visualization
+
+``` r
 cuberoot_trans = function()trans_new('cuberoot', transform = function(x) x^(1/3), inverse = function(x) x^3)
 
 ggplot(aes(x = carat, y = price, color = color), data = diamonds) + 
@@ -34,12 +36,13 @@ ggplot(aes(x = carat, y = price, color = color), data = diamonds) +
   scale_y_continuous(trans = log10_trans(), limits = c(350, 30000),
                      breaks = c(350, 1000, 5000, 10000, 15000, 20000, 25000, 30000)) +
   ggtitle('Price by Carat and Color')
-
 ```
 
+![](Hw8_Final_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 # Question 2
-```{r, message=FALSE, warning=FALSE}
+
+``` r
 library(nls2)
 library(broom)
 
@@ -77,6 +80,4 @@ longer_data <- compare_models %>%
 print(longer_data)
 ```
 
-
-
-
+![](Hw8_Final_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
